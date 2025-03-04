@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyable Prompts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: left;
+        }
+        .prompt-container {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+        .copy-button {
+            cursor: pointer;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📋 Copyable Prompts</h1>
+
+    <h2>Content Creation</h2>
+
+    <div class="prompt-container">
+        <span>1. **Create a content publishing calendar** with 10 content ideas that cover [topic]. Include the publishing date for the months of February 2023 and March 2023.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>2. **Tell me 10 interesting topics** a [role] should address on LinkedIn to create awareness of his services.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>3. **Give me 20 content ideas** for LinkedIn a [role] could use to promote his business.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>4. **Tell me the top performing topics** for [role] on LinkedIn.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <h2>Research</h2>
+
+    <div class="prompt-container">
+        <span>1. **Act as an experienced market researcher.** Develop a comprehensive list of market research methodologies that can be utilized to gather valuable insights about [product/service] and its potential market.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>2. **Gather Public Data:** Act as an experienced market researcher. Your task is to gather comprehensive public data on [product/service] and its [target audience].</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>3. **Find competitors:** As an experienced market researcher, your task is to identify potential competitors for a specific [product/service].</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <h2>Marketing</h2>
+
+    <div class="prompt-container">
+        <span>1. **Market trend analysis:** Provide insights on the latest trends in **(industry)**. How can these trends influence marketing strategy for **(product/service)**?</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>2. **Caption:** Write catchy, short captions for **(LinkedIn/Instagram/Twitter)** to promote **(product/service)**.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>3. **Email marketing optimization:** Revise this email copy: **(input)**. Improve subject lines, add personalization, and ensure the message is concise, engaging, and conversion-driven.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <h2>SEO</h2>
+
+    <div class="prompt-container">
+        <span>1. **Please analyze the text on [insert URL]** and recommend other keywords I should target on this page.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>2. **Optimize the following title** for Google SEO, SEO title readability, and SEO title limitations.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>3. **I want a prompt that will give the good SEO optimized blog post title and blog structure for coupon promotion posts.** For example, Skillshare coupon.</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>4. **I'm writing a blog post on (insert topic), can you recommend relevant internal links on (insert website URL).**</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <div class="prompt-container">
+        <span>5. **I’m writing a blog post about (insert topic), can you recommend some popular articles I should review and consider citing?**</span>
+        <button class="copy-button" onclick="copyToClipboard(this)">📋 Copy</button>
+    </div>
+
+    <script>
+        function copyToClipboard(button) {
+            let textToCopy = button.parentElement.querySelector("span").innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert("✅ Copied: " + textToCopy);
+            }).catch(err => {
+                console.error("Error copying text:", err);
+                alert("❌ Failed to copy. Please try again!");
+            });
+        }
+    </script>
+
+</body>
+</html>
